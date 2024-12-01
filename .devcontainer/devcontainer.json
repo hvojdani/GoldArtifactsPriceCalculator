@@ -1,0 +1,17 @@
+{
+  "name": "Kotlin Android",
+  "image": "mcr.microsoft.com/vscode/devcontainers/java:17",
+  "features": {
+    "ghcr.io/devcontainers/features/android-sdk:1": {}
+  },
+  "postCreateCommand": "sdkmanager --licenses && sdkmanager 'platforms;android-33' 'build-tools;33.0.0'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-gradle",
+        "google.android-emulator"
+      ]
+    }
+  }
+}
