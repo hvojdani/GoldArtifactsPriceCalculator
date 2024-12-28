@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">محاسبه گر قیمت طلا</string>
+    <string name="navigation_drawer_open">باز کردن منو</string>
+    <string name="navigation_drawer_close">بستن منو</string>
+    <string name="nav_header_title">ماشین حساب خرید طلا</string>
+    <string name="nav_header_subtitle">hamed-vojdani@hotmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_help">راهنما</string>
+    <string name="value_result">%1$s تومان</string>
+    <string name="menu_home">محاسبه گر</string>
+    <string name="menu_gallery">تنظیمات</string>
+    <string name="menu_slideshow">درباره ما</string>
+    <string name="calculate_price">محاسبه</string>
+    <string name="sales_profit_percent">درصد سود</string>
+    <string name="construction_wages">اجرت</string>
+    <string name="construction_wages_constant">اجرت ثابت</string>
+    <string name="net_weight">وزن خالص طلا</string>
+    <string name="attachments">ملحقات (سنگ،چرم و..)</string>
+    <string name="constant">اجرت ساخت ثابت</string>
+    <string name="percent">اجرت ساخت درصدی</string>
+    <string name="zero">0</string>
+    <string name="daily_gold_price">قیمت روز طلا</string>
+    <string name="daily_gold_price_desc">قیمت هر گرم طلا به تومان</string>
+    <string name="value_added_tax">درصد مالیات بر ارزش افزوده</string>
+    <string name="save_settings">اعمال تنظیمات</string>
+</resources>

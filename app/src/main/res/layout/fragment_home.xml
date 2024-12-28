@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="rtl"
+    android:id="@+id/rootScroll"
+    tools:context=".ui.home.HomeFragment"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl">
+
+
+        <TextView
+            android:id="@+id/text_daily_gold_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:gravity="start"
+            android:paddingLeft="@dimen/padding_10dp"
+            android:paddingTop="12dp"
+            android:paddingRight="@dimen/padding_10dp"
+            android:text="@string/daily_gold_price_desc"
+            android:textAlignment="textStart"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/edit_daily_gold_price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <EditText
+            android:id="@+id/edit_daily_gold_price"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textDirection="ltr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text_daily_gold_price"
+            app:layout_constraintTop_toTopOf="@id/text_daily_gold_price"
+            app:layout_constraintWidth_percent="0.7"
+            tools:text="@string/daily_gold_price_desc" />
+
+        <TextView
+            android:id="@+id/text_net_weight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="start"
+            android:paddingLeft="@dimen/padding_10dp"
+            android:paddingTop="12dp"
+            android:paddingRight="@dimen/padding_10dp"
+            android:text="@string/net_weight"
+            android:textAlignment="textStart"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/edit_net_weight"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_daily_gold_price"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <EditText
+            android:id="@+id/edit_net_weight"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textDirection="ltr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text_net_weight"
+            app:layout_constraintTop_toTopOf="@id/text_net_weight"
+            app:layout_constraintWidth_percent="0.7"
+            tools:text="@string/net_weight" />
+
+        <TextView
+            android:id="@+id/text_attachments"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="start"
+            android:paddingLeft="@dimen/padding_10dp"
+            android:paddingTop="12dp"
+            android:paddingRight="@dimen/padding_10dp"
+            android:text="@string/attachments"
+            android:textAlignment="textStart"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/edit_attachments"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_net_weight"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <EditText
+            android:id="@+id/edit_attachments"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textDirection="ltr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text_attachments"
+            app:layout_constraintTop_toTopOf="@id/text_attachments"
+            app:layout_constraintWidth_percent="0.7"
+            tools:text="@string/attachments" />
+
+        <TextView
+            android:id="@+id/text_sales_profit_percent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="start"
+            android:paddingLeft="@dimen/padding_10dp"
+            android:paddingTop="12dp"
+            android:paddingRight="@dimen/padding_10dp"
+            android:text="@string/sales_profit_percent"
+            android:textAlignment="textStart"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/edit_sales_profit_percent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_attachments"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <EditText
+            android:id="@+id/edit_sales_profit_percent"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:textAlignment="center"
+            android:textDirection="ltr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text_sales_profit_percent"
+            app:layout_constraintTop_toTopOf="@id/text_sales_profit_percent"
+            app:layout_constraintWidth_percent="0.7"
+            tools:text="@string/sales_profit_percent" />
+
+        <RadioGroup
+            android:id="@+id/group_construction_wage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/edit_sales_profit_percent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_sales_profit_percent"
+            app:layout_constraintWidth_percent="0.38">
+
+            <RadioButton
+                android:id="@+id/construction_wage_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/percent"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/construction_wage_constant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/constant"
+                android:textSize="14sp" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/edit_construction_wages"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textDirection="ltr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/group_construction_wage"
+            app:layout_constraintTop_toTopOf="@id/group_construction_wage"
+            app:layout_constraintWidth_percent="0.55"
+            tools:text="@string/construction_wages" />
+
+        <Button
+            android:id="@+id/button_calculate"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="70dp"
+            android:text="@string/calculate_price"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_construction_wages"
+            app:layout_constraintWidth_percent="0.80" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#FAD84E"
+            android:layoutDirection="inherit"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@id/button_calculate"
+            tools:layout_editor_absoluteX="10dp">
+
+            <!-- First group -->
+            <LinearLayout
+                android:id="@+id/first_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="قیمت نهایی:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_final_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="0 تومان"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="قیمت طلا + اجرت ساخت + سود + مالیات + ملحقات"
+                    android:textColor="#A06161"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#787070" />
+            </LinearLayout>
+
+            <!-- Second group -->
+            <LinearLayout
+                android:id="@+id/second_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/first_group">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="قیمت طلا:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_gold_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="0 تومان"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="وزن ✕ نرخ روز طلا"
+                    android:textAlignment="viewStart"
+                    android:textColor="#A06161"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#787070" />
+            </LinearLayout>
+
+            <!-- Third group -->
+            <LinearLayout
+                android:id="@+id/third_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/second_group">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="اجرت ساخت:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_result_construction_wage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="0 تومان"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="قیمت طلا ✕ درصد اجرت"
+                    android:textColor="#A06161"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#787070" />
+            </LinearLayout>
+
+            <!-- Fourth group -->
+            <LinearLayout
+                android:id="@+id/fourth_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/third_group">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="سود فروش طلا:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_result_sales_wage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="0 تومان"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(قیمت طلا + اجرت ساخت) ✕ درصد سود فروش"
+                    android:textColor="#A06161"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#787070" />
+            </LinearLayout>
+
+            <!-- Fifth group -->
+            <LinearLayout
+                android:id="@+id/fifth_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fourth_group">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="مالیات:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_result_tax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="0 تومان"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_tax_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(سود فروش طلا + اجرت ساخت) ✕ ۹ %"
+                    android:textColor="#A06161"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#787070" />
+            </LinearLayout>
+
+            <!-- Sixth group -->
+            <LinearLayout
+                android:id="@+id/sixth_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fifth_group">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="محاسبه بر اساس حذف مالیات از اصل طلا"
+                    android:textAlignment="center"
+                    android:textColor="#A06161"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="از دی ماه سال 1400 مالیات بر ارزش افزوده طلا تنها بر روی میزان سود و اجرت ساخت طلا لحاظ می شود و در این برنامه نیز تمامی محاسبات بر اساس این استاندارد قانونی انجام می شود"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
