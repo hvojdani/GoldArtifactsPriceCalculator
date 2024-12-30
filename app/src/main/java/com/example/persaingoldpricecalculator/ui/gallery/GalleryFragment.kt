@@ -44,7 +44,7 @@ class GalleryFragment : Fragment() {
 
     private fun handleButtonClick(view: View?) {
         val enteredNumberString = binding.editValueAddedTax.text.toString();
-        var enteredNumber = 9f;
+        val enteredNumber: Float;
         try {
             enteredNumber = enteredNumberString.toFloat();
         } catch (e: NumberFormatException) {

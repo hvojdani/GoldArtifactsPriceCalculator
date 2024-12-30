@@ -41,7 +41,6 @@ class HomeFragment : Fragment() {
         binding.editAttachments.addThousandSeparator();
         binding.editNetWeight.addThousandSeparator();
 
-        val text = "(سود فروش طلا + اجرت ساخت) ✕ ۹ %";
         val valueAddedTax = getTaxPercentSetting();
         binding.textTaxDesc.text = "(سود فروش طلا + اجرت ساخت) ✕ 9 %".replace("9", valueAddedTax.toString());
 
@@ -72,7 +71,7 @@ class HomeFragment : Fragment() {
             Toast.makeText(this.activity, "Invalid netWeight. Please enter a valid number.", Toast.LENGTH_SHORT).show()
             return
         }
-
+        val valueAddedTax = getTaxPercentSetting();
         val goldValue = goldPrice * netWeight;
         binding.textGoldValue.text = getString(R.string.value_result, DecimalFormat("#,###").format(goldValue))
 
@@ -88,7 +87,7 @@ class HomeFragment : Fragment() {
         val salesProfit = (goldValue + constructionWage) * (salesProfitPercent / 100);
         binding.textResultSalesWage.text = getString(R.string.value_result, DecimalFormat("#,###").format(salesProfit))
 
-        val tax = (salesProfit + constructionWage) * 0.09;
+        val tax = (salesProfit + constructionWage) * valueAddedTax / 100;
         binding.textResultTax.text =
             getString(R.string.value_result, DecimalFormat("#,###").format(tax))
 
