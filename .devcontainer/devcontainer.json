@@ -1,0 +1,7 @@
+{
+    "name": "android ",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",  
+    "features": {
+        "ghcr.io/nordcominc/devcontainer-features/android-sdk:1": {}
+    }
+}
